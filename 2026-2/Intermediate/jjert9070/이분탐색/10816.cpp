@@ -17,17 +17,13 @@ int firstCard(std::vector<int>& cards, int target)
         {
             startIndex = midIndex + 1;
         }
-        else if(cards[midIndex] > target)
-        {
-            endIndex = midIndex - 1;
-        }
-        else if(cards[midIndex] == target)
+        else if(cards[midIndex] >= target)
         {
             endIndex = midIndex - 1;
         }
     }
 
-    return midIndex;
+    return startIndex;
 }
 
 int lastCard(std::vector<int>& cards, int target)
@@ -41,7 +37,7 @@ int lastCard(std::vector<int>& cards, int target)
     {
         midIndex = (startIndex + endIndex) / 2;
 
-        if(cards[midIndex] < target)
+        if(cards[midIndex] <= target)
         {
             startIndex = midIndex + 1;
         }
@@ -49,15 +45,9 @@ int lastCard(std::vector<int>& cards, int target)
         {
             endIndex = midIndex - 1;
         }
-        else if(cards[midIndex] == target)
-        {
-            startIndex = midIndex + 1;
-        }
     }
 
-    return midIndex;
-
-
+    return startIndex;
 }
 
 
