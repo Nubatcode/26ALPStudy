@@ -53,6 +53,9 @@ int lastCard(std::vector<int>& cards, int target)
 
 int main()
 {
+    std::ios::sync_with_stdio(NULL);
+    std::cin.tie(0);
+    
     int n;
     int m;
     std::vector<int> cards;
