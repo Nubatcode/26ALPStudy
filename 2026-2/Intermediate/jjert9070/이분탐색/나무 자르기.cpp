@@ -27,7 +27,7 @@ int getMaxHeight(std::vector<int>& arr, int m)
         }
 
 
-        if(sum >= m)
+        if(sum == m)
         {
             return now;
         }
